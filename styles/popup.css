@@ -1,0 +1,33 @@
+body {
+  font-family: sans-serif;
+  padding: 10px;
+  width: 320px;
+}
+
+.cookie {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+
+.name {
+  font-weight: bold;
+}
+
+.filter-bar {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.filter-bar select,
+.filter-bar input[type="text"] {
+  flex: 1;
+  padding: 5px;
+}
+
+hr {
+  margin: 10px 0;
+  border: none;
+  border-top: 1px solid #ddd;
+}

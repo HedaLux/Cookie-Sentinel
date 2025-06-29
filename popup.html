@@ -1,22 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Cookies du site</title>
-  <style>
-    body { font-family: sans-serif; padding: 10px; width: 300px; }
-    .cookie { margin-bottom: 10px; border-bottom: 1px solid #ccc; }
-    .name { font-weight: bold; }
-  </style>
+  <title>Site Cookies</title>
+  <link rel="stylesheet" href="styles/popup.css">
 </head>
 <body>
   <h3>Cookies</h3>
-  <label>
-    <input type="checkbox" id="contextOnly" checked />
-    Show only cookies related to the current site
-    <input type="text" id="searchInput" placeholder="Filter by domain..." style="width: 100%; margin-top: 10px; padding: 5px;" />
-    ___________________________________________________
-  </label>
+
+  <div>
+    <label>
+      <input type="checkbox" id="contextOnly" checked />
+      Show only cookies from current site
+    </label>
+  </div>
+
+  <div class="filter-bar">
+    <select id="filterType">
+      <option value="domain" selected>Filter by: Domain</option>
+      <option value="name">Filter by: Name</option>
+    </select>
+    <input type="text" id="searchFilter" placeholder="Filter keyword..." />
+  </div>
+
+  <hr />
+
   <div id="cookieList">Loading...</div>
-  <script src="popup.js"></script>
+
+  <script type="module" src="popup.js"></script>
 </body>
 </html>
